@@ -13,6 +13,7 @@ Future<void> main() async {
   Bloc.observer = MyBlocObserver();
 
   await Hive.initFlutter();
+  // بقول ل هايف اني عايز تبتدي تخزني noteModel
   Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
 

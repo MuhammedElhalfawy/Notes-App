@@ -13,7 +13,8 @@ class NotesView extends StatelessWidget {
         child: FloatingActionButton(
           onPressed: () {
             showModalBottomSheet(
-                isScrollControlled: true,
+              // يطلع لفوق يتعمله سكرول لما افتح او يظهر الكيبورد
+            isScrollControlled: true,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
@@ -27,7 +28,9 @@ class NotesView extends StatelessWidget {
           ),
         ),
       ),
-      body: FadeInUp(child: const NotesViewBody()),
+      body: FadeInUp(
+        child: const NotesViewBody(),
+      ),
     );
   }
 }
